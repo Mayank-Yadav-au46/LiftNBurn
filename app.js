@@ -15,7 +15,8 @@ app.use(urlencoded({ extended: true }));
 app.use(express.static("public"));
 app.use("/user", sample_router);
 
-app.listen(4500, () => {
+const PORT = process.env.PORT || 8000;
+app.listen(PORT, () => {
   console.log("Server started");
   db_connect();
 });
