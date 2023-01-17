@@ -1,0 +1,83 @@
+html {
+  background-color: black;
+  color: white;
+}
+h1 {
+  background-color: rgba(48, 206, 8, 0.788);
+  width: 10rem;
+  margin: auto;
+  margin-bottom: 2rem;
+  border-radius: 20px;
+  padding: 2%;
+}
+body {
+  font-family: cursive;
+}
+fieldset {
+  margin: auto;
+  border-radius: 20px;
+  background-color: rgba(28, 28, 29, 0.466);
+  border: 1px solid white;
+  width: 400px;
+  padding: 30px;
+  box-shadow: 1px 10px 20px orangered;
+}
+form {
+  margin: auto;
+  border-radius: 20px;
+  background-color: rgba(28, 28, 29, 0.466);
+  border: 1px solid white;
+  width: 400px;
+  padding: 30px;
+}
+.btn1 {
+  background-color: rgba(48, 206, 8, 0.788);
+  border-width: 0px;
+  border-radius: 100px;
+  height: 30px;
+  width: 30px;
+  color: white;
+}
+.inp {
+  width: 300px;
+  height: 20px;
+  border-radius: 3px;
+  border: 0px;
+  background-color: rgba(218, 200, 200, 0.521);
+}
+textarea {
+  border-radius: 3px;
+  border: 0px;
+  background-color: rgb(214, 203, 203);
+}
+span {
+  font-size: 20px;
+  font-weight: 450;
+}
+span:hover {
+  transition-duration: 0.2s;
+  font-size: 23px;
+  padding: 10px;
+  border-radius: 9px;
+  background-color: greenyellow;
+}
+label {
+  font-size: 15px;
+}
+.submit {
+  height: 50px;
+  width: 400px;
+  border-radius: 10px;
+  border: 0px;
+  background-color: rgba(48, 206, 8, 0.788);
+}
+.submit:hover {
+  transition-duration: 0.2s;
+  background-color: green;
+  color: white;
+  font-size: 25px;
+}
+.job {
+  font-size: 18px;
+  font-weight: 30px;
+}

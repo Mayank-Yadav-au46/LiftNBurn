@@ -1,0 +1,54 @@
+body {
+  background-color: black;
+  height: 100rem;
+}
+nav {
+  /* position: fixed; */
+  top: 0;
+  margin-bottom: 10px;
+  background-color: rgb(148, 116, 9);
+  border-radius: 0px;
+  padding: 10px;
+  color: white;
+  box-shadow: 0.2rem 0.2rem 0.5rem white;
+}
+.title {
+  font-size: 2rem;
+  font-weight: 700;
+}
+nav > span {
+  margin-left: 2px;
+  margin-right: 2px;
+  font-size: 20px;
+}
+.login {
+  margin-left: 62rem;
+  font-weight: 600;
+  font-size: 1.4rem;
+}
+
+.login:hover {
+  padding: 0.5%;
+  border-radius: 0.5rem;
+  background-color: black;
+  font-size: 1.5rem;
+  transition: 0.2s;
+}
+.head {
+  height: 20rem;
+  margin: 4rem 1rem;
+  width: 70rem;
+  color: orangered;
+  text-shadow: 0px 5px 10px rgb(99, 97, 97);
+}
+.heading {
+  font-size: 6rem;
+}
+.users {
+  width: 50rem;
+}
+li {
+  color: white;
+  margin: 1rem 1rem;
+  background-color: rgba(128, 128, 128, 0.288);
+}

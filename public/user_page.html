@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User page</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="./Css/user_style.css" />
+    <script src="./Script/user_script.js" defer></script>
+  </head>
+
+  
+  <body>
+
+    <!-- -------------------navbar--------------------- -->
+    <nav>
+      <div class="title_shadow"></div>
+      <span class="title">Lift<span class="N">N</span class="title">Burn</span>
+      <span class="username" onclick="user()" id="username">user_name </span><span class="slash">|</span> 
+      <a href="#" class="logout" onclick="logout()"> LogOut </a>
+    </nav>
+
+    <!-- --------------------------------front image--------------------------------- -->
+
+    <div class="container_img">
+      <div class="f_d">
+        <h1 class="hd-1">Rediscover <span class="your">Yourself</span></h1>
+        <h1 class="hd-2">Redefine <span class="your">Yourself</span></h1>
+        <h1 class="hd-3">Reform <span class="your">Yourself</span></h1>
+        <h1 class="hd-4">with</h1>
+        <h1 class="hd-5">Lift<span class="NW">N</span>Burn</h1>
+      </div>
+    </div>
+
+    <!-- ----------------------------------user info----------------------------- -->
+
+    <div class="user_info">
+      <h1 class="heading">Welcome <span id="welcomeusername"></span></h1><br>
+      <div class="bmi">
+        
+        <p>The body mass index (BMI) is a measure that uses your height and weight to work out if your weight is healthy. A high BMI can indicate high body fatness. BMI screens for weight categories that may lead to health problems, but it does not diagnose the body fatness or health of an individual. If your BMI is:<br>
+          below <span class="bmirange" >18.5</span> – you're in the underweight range<br>
+          between <span class="bmirange">18.5</span>and <span class="bmirange">24.9</span> – you're in the healthy weight range<br>
+          between <span class="bmirange">25</span>and <span class="bmirange">29.9</span> – you're in the overweight range<br>
+          <span class="bmirange">30</span> or over – you're in the obese range</p>
+        <p><span class="arrow"> >> </span>Your BMI is <span id="dispbmi" class="orangered"></span> and you are <span id="bmistatus" class="orangered"></span></p>
+      </div>
+      <!-- <div class="bmr">
+        <p><span class="arrow"> >> </span>Your BMR is <span id="dispbmr" style="color: orangered; font-size: 1.8rem; font-weight: 600;"></span></p>
+        <p>The BMR refers to the amount of energy your body needs to maintain homeostasis. Your BMR is largely determined by your total lean mass, especially muscle mass, because lean mass requires a lot of energy to maintain. Anything that reduces lean mass will reduce your BMR.</p>
+      </div> -->
+      <div class="ctb">
+        <p><span class="arrow"> >> </span>Your have to burn <span id="ctb" class="orangered"></span> calories today.</p>        
+      </div>
+    </div>
+      
+    </div>
+    
+    <!-- --------------------------workout------------------ -->
+
+    <div class="ready" style="text-align: center; margin: 13rem 1rem;">
+        <h1 class="begin" style="color: rgba(255, 255, 255, 0.5);">Ready to kill some <span class="arrow">Calories</span>? So let us <span class="arrow">begin..</span></h1>
+    </div>
+
+
+    <!-- ------------------------------------warmup------------------------ -->
+    <div class="ex-heading">
+        <h1><span class="arrow">1.</span> Warmup </h1>
+    </div>
+    <div style="margin: 1rem 1rem;">
+        <p>The warm up exercises are crucial to any sports or fitness training program. The importance of a structured warm up routine should not be under estimated when it comes to preventing sports injury.</p>   
+        <p><span class="arrow"> >> </span>Your have to burn <span id="ctb-warmup" class="orangered"></span> Calories just by warming up!</p><br><br><br>      
+    </div>
+    <p style="margin-left: 1rem; color: white;">Warmup incluedes following basic excercise:</p><br>
+
+    <fieldset class="warmup-container">
+        <div class="card-w">
+            <h4 class="work">Stretching</h4>   
+            <p class="card-p">Stretching is a physical exercise that requires putting a body part in a certain position that'll serve in the lengthening and elongation of the muscle or muscle group and thus enhance its flexibility and elasticity.<br> <a class="card-a" href="https://www.youtube.com/watch?v=PhJAAp9v2N0">click for more</a></p>         
+        </div>
+        <div class="card-w">
+           <h4 class="work">Pushups</h4>
+           <p class="card-p">Pushups are an exercise in which a person, keeping a prone position, with the hands palms down under the shoulders, the balls of the feet on the ground, and the back straight, pushes the body up and lets it down by an alternate straightening and bending of the arms.<br> <a class="card-a" href="https://www.youtube.com/watch?v=Z88Rl5bpnmI">click for more</a></p>
+        </div>
+        <div class="card-w">
+            <h4 class="work">Pullups</h4>
+            <p class="card-p">A pull-up is an upper-body strength exercise. The pull-up is a closed-chain movement where the body is suspended by the hands, gripping a bar or other implement at a distance typically wider than shoulder-width, and pulled up.<br> <a class="card-a" href="https://www.youtube.com/watch?v=3YvfRx31xDE">click for more</a></p>
+        </div>
+        <div class="card-w">
+            <h4 class="work">Skipping</h4>
+            <p class="card-p">A skipping rope or jump rope is a tool used in the sport of skipping/jump rope where one or more participants jump over a rope swung so that it passes under their feet and over their heads.<br> <a class="card-a" href="https://www.youtube.com/watch?v=aFoektJK9dU">click for more</a></p>
+        </div>
+        <div class="card-w">
+            <h4 class="work">Jogging</h4>
+            <p class="card-p">Jogging is a form of trotting or running at a slow or leisurely pace. The main intention is to increase physical fitness with less stress on the body than from faster running but more than walking, or to maintain a steady speed for longer periods of time.<br> <a class="card-a" href="https://www.youtube.com/watch?v=wpwl-Ga-2g4">click for more</a></p>
+        </div>
+        <div class="card-w">
+            <h4 class="work">Cycling</h4>
+            <p class="card-p">Rather than pedal, push yourself off by foot. Tuck your feet upwards and onto the pedals. While in motion, maintain the bike's balance as long as you can. Once you feel the bike beginning to tip, catch it by putting one foot to the ground, then push off again.<br> <a class="card-a" href="https://www.youtube.com/watch?v=wqmzwVrkTU4   ">click for more</a></p>
+            </div>       
+    </fieldset>
+
+
+    <!-- ------------------------------workout------------------------- -->
+
+    <div class="ex-heading">
+        <h1><span class="arrow">2.</span> Workout </h1>         
+    </div>
+    <p><span class="arrow"> >> </span>Your have to burn <span id="ctb-workout" class="orangered"></span> Calories by doing one of the workout schedule</p> 
+    
+    
+        
+       
+    
+
+    <!-- ---------------------------------choose workout------------------------- -->
+
+    <div class="type">
+      <h1 class="heading">Choose your workout preference:</h1>
+    </div><br>
+    <fieldset class="container-card">
+        <div class="type_of_ex">
+            <div class="card" style="width: 18rem">
+                <img
+                  class="card-img-top"
+                  src="./card image/crossfit.jpg"
+                  alt="Card image cap"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Crossfit</h5>
+                  <p class="card-text">
+                    CrossFit is a strength and conditioning workout that is made up of functional movement performed at a high intensity level.
+                  </p>
+                  <a href="https://www.youtube.com/watch?v=5IYOeFYbS2Y" class="btn btn-primary">Click here for more</a>
+                </div>
+              </div>
+        </div>
+        <div class="exercise">
+            <h2 style="color: rgba(199, 133, 10, 0.603);">Exercises to perform:<span style="color: white;"> One set each</span> </h2>
+            <fieldset class="workout-container">
+                <div class="workout-box">
+                    <div class="workout-anchor">
+                        <span class="arrow">>
+                            <a class="workout-a" href="https://www.youtube.com/watch?v=8bppcsg07Rc">Monkey Bar</a></span><br>
+                    </div>
+                    <div class="workout-anchor">
+                        <span class="arrow">><a class="workout-a" href="https://www.youtube.com/watch?v=Ah4Uys8YNZU">Battle Rope</a></span><br>                                   
+                    </div>
+                    <div class="workout-anchor">
+                        <span class="arrow">><a class="workout-a" href="https://www.youtube.com/watch?v=D0aXNizRl04">Ladder</a></span><br>                                   
+                    </div>
+                    <div class="workout-anchor">
+                        <span class="arrow">><a class="workout-a" href="https://www.youtube.com/watch?v=9XRRXaUpnLk">Sled Push</a></span><br>                                   
+                    </div>
+                    
+                </div>
+                <div class="workout-box">
+                    <div class="workout-anchor">
+                        <span class="arrow">>
+                            <a class="workout-a" href="https://www.youtube.com/watch?v=rkxUzziOuv4">Tire Rope pull</a></span><br>
+                    </div>
+                    <div class="workout-anchor">
+                        <span class="arrow">><a class="workout-a" href="https://www.youtube.com/watch?v=UkKA9SMevcM">Sledge Hammer</a></span><br>                                   
+                    </div>
+                    <div class="workout-anchor">
+                        <span class="arrow">><a class="workout-a" href="https://www.youtube.com/watch?v=hvyzZc7Ol-0">Jumping</a></span><br>                                   
+                    </div>
+                    <div class="workout-anchor">
+                        <span class="arrow">><a class="workout-a" href="https://www.youtube.com/watch?v=1BZM2Vre5oc">Skipping</a></span><br>                                   
+                    </div>
+                </div>
+                <div class="workout-box">
+                    <div class="workout-anchor">
+                        <span class="arrow">>
+                            <a class="workout-a" href="https://www.youtube.com/watch?v=6iam4u23zuM">Jump Pushups</a></span><br>
+                    </div>
+                    <div class="workout-anchor">
+                        <span class="arrow">><a class="workout-a" href="https://www.youtube.com/watch?v=Ah4Uys8YNZU">Battle Rope</a></span><br>                                   
+                    </div>
+                    <div class="workout-anchor">
+                        <span class="arrow">><a class="workout-a" href="https://www.youtube.com/watch?v=qLBImHhCXSw">Burpee</a></span><br>                                   
+                    </div>
+                    <div class="workout-anchor">
+                        <span class="arrow">><a class="workout-a" href="https://www.youtube.com/watch?v=Ymfi27avP2o">Chinups</a></span><br>                                   
+                    </div>
+                </div>
+            </fieldset>
+            <div class="workout-stretch">
+                <p> After completing the workout, relax for 5-10 minutes and then start <a class="stretching" href="https://www.youtube.com/watch?v=4Ajg_KJwbHc">Stretching</a></p>
+            </div>
+        </div>
+
+    </fieldset>
+    <fieldset class="container-card">
+        <div class="type_of_ex">
+            <div class="card" style="width: 18rem">
+                <img
+                  class="card-img-top"
+                  src="./card image/weight lift.jpg"
+                  alt="Card image cap"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Weight Lifting</h5>
+                  <p class="card-text">
+                    It is an exercise designed to strengthen the arms and upper body, especially the shoulders and chest.
+                  </p>
+                  <a href="https://www.youtube.com/watch?v=zPqAr6n7MAw" class="btn btn-primary">Click here for more</a>
+                </div>
+              </div>
+        </div>
+          <div class="exercise">
+            <h2 style="color: rgba(199, 133, 10, 0.603);">Exercises to perform:<span style="color: white;"> One set each</span> </h2>
+            <fieldset class="workout-container">
+                <div class="workout-box">
+                    <div class="workout-anchor">
+                        <span class="arrow">>
+                            <a class="workout-a" href="https://www.youtube.com/watch?v=vthMCtgVtFw">Bench Press</a></span><br>
+                    </div>
+                    <div class="workout-anchor">
+                        <span class="arrow">><a class="workout-a" href="https://www.youtube.com/watch?v=Iwe6AmxVf7o">Cable fly</a></span><br>                                   
+                    </div>
+                    <div class="workout-anchor">
+                        <span class="arrow">><a class="workout-a" href="https://www.youtube.com/watch?v=yTphpkybKuA">Front Raise</a></span><br>                                   
+                    </div>
+                    <div class="workout-anchor">
+                        <span class="arrow">><a class="workout-a" href="https://www.youtube.com/watch?v=ytGaGIn3SjE">Deadlift</a></span><br>                                   
+                    </div>
+                    
+                </div>
+                <div class="workout-box">
+                    <div class="workout-anchor">
+                        <span class="arrow">>
+                            <a class="workout-a" href="https://www.youtube.com/watch?v=OcFCHdQHjVU">Latt Pulldown</a></span><br>
+                    </div>
+                    <div class="workout-anchor">
+                        <span class="arrow">><a class="workout-a" href="https://www.youtube.com/watch?v=8c23NBbwLBc">T-bar </a></span><br>                                   
+                    </div>
+                    <div class="workout-anchor">
+                        <span class="arrow">><a class="workout-a" href="https://www.youtube.com/watch?v=AIZ8q1qruKw">Squat</a></span><br>                                   
+                    </div>
+                    <div class="workout-anchor">
+                        <span class="arrow">><a class="workout-a" href="https://www.youtube.com/watch?v=p-R0HSfL6nw">Lunges/a></span><br>                                   
+                    </div>
+                </div>
+                <div class="workout-box">
+                    <div class="workout-anchor">
+                        <span class="arrow">>
+                            <a class="workout-a" href="https://www.youtube.com/watch?v=YyvSfVjQeL0">Leg extention</a></span><br>
+                    </div>
+                    <div class="workout-anchor">
+                        <span class="arrow">><a class="workout-a" href="https://www.youtube.com/watch?v=3ml7BH7mNwQ">Arnold Press</a></span><br>                                   
+                    </div>
+                    <div class="workout-anchor">
+                        <span class="arrow">><a class="workout-a" href="https://www.youtube.com/watch?v=zC3nLlEvin4">Hammer Curl</a></span><br>                                   
+                    </div>
+                    <div class="workout-anchor">
+                        <span class="arrow">><a class="workout-a" href="https://www.youtube.com/watch?v=3VcKaXpzqRo">Lateral Raise</a></span><br>                                   
+                    </div>
+                </div>
+            </fieldset>
+            <div class="workout-stretch">
+                <p> After completing the workout, relax for 5-10 minutes and then start <a class="stretching" href="https://www.youtube.com/watch?v=4Ajg_KJwbHc">Stretching</a></p>
+            </div>
+          </div>
+    </fieldset>
+
+    <fieldset class="container-card">
+        <div class="type_of_ex">
+            <div class="card" style="width: 18rem">
+                <img
+                  class="card-img-top"
+                  src="./card image/athelete.jpg"
+                  alt="Card image cap"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Athelete</h5>
+                  <p class="card-text">
+                    An athletic workout type refers to exercie to shape body that is muscular, less curvy and with less body fat.
+                  </p>
+                  <a href="https://www.youtube.com/watch?v=MrZ_nogQQdw" class="btn btn-primary">Click here for more</a>
+                </div>
+              </div>
+        </div>
+        <div class="exercise">
+          <h2 style="color: rgba(199, 133, 10, 0.603);">Exercises to perform:<span style="color: white;"> One set each</span> </h2>
+            <fieldset class="workout-container">
+                <div class="workout-box">
+                    <div class="workout-anchor">
+                        <span class="arrow">>
+                            <a class="workout-a" href="https://www.youtube.com/watch?v=hp6dbihCuuQ">Skipping</a></span><br>
+                    </div>
+                    <div class="workout-anchor">
+                        <span class="arrow">><a class="workout-a" href="https://www.youtube.com/watch?v=UMaZGY6CbC4">Situps</a></span><br>                                   
+                    </div>
+                    <div class="workout-anchor">
+                        <span class="arrow">><a class="workout-a" href="https://www.youtube.com/watch?v=pvIjsG5Svck">Plank</a></span><br>                                   
+                    </div>
+                    <div class="workout-anchor">
+                        <span class="arrow">><a class="workout-a" href="https://www.youtube.com/watch?v=EsMl8Lrz7-Q">Crunch</a></span><br>                                   
+                    </div>
+                    
+                </div>
+                <div class="workout-box">
+                    <div class="workout-anchor">
+                        <span class="arrow">>
+                            <a class="workout-a" href="https://www.youtube.com/watch?v=3qjoXDTuyOE">Cable Crunch</a></span><br>
+                    </div>
+                    <div class="workout-anchor">
+                        <span class="arrow">><a class="workout-a" href="https://www.youtube.com/watch?v=wkD8rjkodUI">Russian twist</a></span><br>                                   
+                    </div>
+                    <div class="workout-anchor">
+                        <span class="arrow">><a class="workout-a" href="https://www.youtube.com/watch?v=w2hGNM4l5so">Rowing</a></span><br>                                   
+                    </div>
+                    <div class="workout-anchor">
+                        <span class="arrow">><a class="workout-a" href="https://www.youtube.com/watch?v=K6I24WgiiPw">Treadmill</a></span><br>                                   
+                    </div>
+                </div>
+                <div class="workout-box">
+                    <div class="workout-anchor">
+                        <span class="arrow">>
+                            <a class="workout-a" href="https://www.youtube.com/watch?v=ph3pddpKzzw">Back extention</a></span><br>
+                    </div>
+                    <div class="workout-anchor">
+                        <span class="arrow">><a class="workout-a" href="https://www.youtube.com/watch?v=rCxF2nG9vQ0">Side plank</a></span><br>                                   
+                    </div>
+                    <div class="workout-anchor">
+                        <span class="arrow">><a class="workout-a" href="https://www.youtube.com/watch?v=iSSAk4XCsRA">Jumping Jack</a></span><br>                                   
+                    </div>
+                    <div class="workout-anchor">
+                        <span class="arrow">><a class="workout-a" href="https://www.youtube.com/watch?v=L7hl01lsaqI">Rebounding</a></span><br>                                   
+                    </div>
+                </div>
+            </fieldset>
+            <div class="workout-stretch">
+                <p> After completing the workout, relax for 5-10 minutes and then start <a class="stretching" href="https://www.youtube.com/watch?v=4Ajg_KJwbHc">Stretching</a></p>
+            </div>
+        </div>
+    </fieldset>
+    <fieldset class="container-card">
+        <div class="type_of_ex">
+            <div class="card" style="width: 18rem">
+                <img
+                  class="card-img-top"
+                  src="./card image/home.jpg"
+                  alt="Card image cap"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Home workout</h5>
+                  <p class="card-text">
+                    Home Workouts provides daily workout routines for all your main muscle groups. In just a few minutes a day, you can build muscles.
+                  </p>
+                  <a href="https://www.youtube.com/watch?v=dzsTgmGxlO8" class="btn btn-primary">Click here for more</a>
+                </div>
+              </div>
+        </div>
+        <div class="exercise">
+          <h2 style="color: rgba(199, 133, 10, 0.603);">Exercises to perform:<span style="color: white;"> One set each</span> </h2>
+            <fieldset class="workout-container">
+                <div class="workout-box">
+                    <div class="workout-anchor">
+                        <span class="arrow">>
+                            <a class="workout-a" href="https://www.youtube.com/watch?v=IODxDxX7oi4">Pushups</a></span><br>
+                    </div>
+                    <div class="workout-anchor">
+                        <span class="arrow">><a class="workout-a" href="https://www.youtube.com/watch?v=1BZM2Vre5oc">Skipping</a></span><br>                                   
+                    </div>
+                    <div class="workout-anchor">
+                        <span class="arrow">><a class="workout-a" href="https://www.youtube.com/watch?v=AIZ8q1qruKw">Squat</a></span><br>                                   
+                    </div>
+                    <div class="workout-anchor">
+                        <span class="arrow">><a class="workout-a" href="https://www.youtube.com/watch?v=pvIjsG5Svck">Plank</a></span><br>                                   
+                    </div>
+                    
+                </div>
+                <div class="workout-box">
+                    <div class="workout-anchor">
+                        <span class="arrow">>
+                            <a class="workout-a" href="https://www.youtube.com/watch?v=dZgVxmf6jkA">Burpee</a></span><br>
+                    </div>
+                    <div class="workout-anchor">
+                        <span class="arrow">><a class="workout-a" href="https://www.youtube.com/watch?v=rCxF2nG9vQ0">Side Plank</a></span><br>                                   
+                    </div>
+                    <div class="workout-anchor">
+                        <span class="arrow">><a class="workout-a" href="https://www.youtube.com/watch?v=wcKyqAMqueQ">Shoulder Tap</a></span><br>                                   
+                    </div>
+                    <div class="workout-anchor">
+                        <span class="arrow">><a class="workout-a" href="https://www.youtube.com/watch?v=QPfOZ0e30xg">High Knee</a></span><br>                                   
+                    </div>
+                </div>
+                <div class="workout-box">
+                    <div class="workout-anchor">
+                        <span class="arrow">>
+                            <a class="workout-a" href="https://www.youtube.com/watch?v=lvaQcFaxL00">Mountain Climbing</a></span><br>
+                    </div>
+                    <div class="workout-anchor">
+                        <span class="arrow">><a class="workout-a" href="https://www.youtube.com/watch?v=oMW59TKZvaI">Double leg butt kick</a></span><br>                                   
+                    </div>
+                    <div class="workout-anchor">
+                        <span class="arrow">><a class="workout-a" href="https://www.youtube.com/watch?v=58yXyh8h2Io">Side Jackknife</a></span><br>                                   
+                    </div>
+                    <div class="workout-anchor">
+                        <span class="arrow">><a class="workout-a" href="https://www.youtube.com/watch?v=1we3bh9uhqY">Bicycle Crunches</a></span><br>                                   
+                    </div>
+                </div>
+            </fieldset>
+            <div class="workout-stretch">
+                <p> After completing the workout, relax for 5-10 minutes and then start <a class="stretching" href="https://www.youtube.com/watch?v=4Ajg_KJwbHc">Stretching</a></p>
+            </div>
+        </div>
+    </fieldset>
+
+    <div style="margin: 5rem 2rem">
+      <p><span class="arrow"> >> </span>Enter the Calories you've burned today: <input type="number" id="cal_input"  style="background-color: rgba(54, 52, 52, 0.301); border-radius: .5rem; color: orangered; border-radius: 1px black;"><button class="cal_btn" onclick="rate_cal()">Submit</button></p> 
+    </div>
+
+    <div class="joinus">
+      <h3 class="your">Your progress rate so far is <span id = "rate" class="orangered"></span>%.</h3>
+  </div><br><br>
+      
+      
+      
+      
+     <!-- -----------------------diet------------------ -->
+
+    <div class="diet">
+      <h1 class="heading">Suggestion of Diet:</h1>
+      
+
+      <p class="subpara">
+        When it comes to nutrition, things can become overly complicated.
+        However, it is clear that nutrition has a huge impact on the progress
+        that you make in the gym. This article will highlight a number of
+        considerations that must be made and applied in order to bring about
+        substantial changes. In addition, it will also serve as a resource and
+        highlight the nutrient rich foods that one should incorporate in their
+        daily gym diet plan.
+      </p><br>
+      <p><span class="arrow"> >> </span>Your have to eat <span id="cte" style="color: orangered; font-size: 2rem; font-weight: 600;"></span> Calories today</p> 
+      <br><br><br><br><br>
+      <h2 class="heading-2">Foods To Add To Your Gym Diet Plan:</h2><br>
+      <h3 class="heading-3">1. Carbohydrates</h3>
+      <p class="subpara">
+        Firstly, carbohydrates are the primary source of energy for the body and
+        therefore play the most substantial role in fueling exercise. There are
+        two different types of carbohydrates i.e. complex and simple. The names
+        give an indication of the time taken to digest complex carbs that take a
+        longer time period to digest than simple carbs.<br /><br />Therefore,
+        you should consume complex carbohydrates for example whole-grains,
+        beans, nuts, fruits, and vegetables for maintaining a proper gym diet
+        plan.
+      </p><br>
+
+      <div class="card-m">
+        <div class="card" style="width: 18rem">
+          <img
+            class="card-img-top"
+            src="./card image/carb_milk.jpg"
+            alt="Card image cap"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Milk</h5>
+            <p class="card-text">
+              Milk is a great source of carbohydrates. It contains multiple vitamins and help you 
+              strengthen the bones.  Milk is approximately 4.9% carbohydrate in the form of lactose
+            </p>
+            <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+          </div>
+        </div>
+        <div class="card" style="width: 18rem">
+          <img
+            class="card-img-top"
+            src="./card image/carb_bread.jpg"
+            alt="Card image cap"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Bread</h5>
+            <p class="card-text">
+              Bread is a great source of carbohydrates. However it is quite uhealthy but it's ok
+              to consume in a limited  amount just to have the carbs your diet requires.  
+            </p>
+            <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+          </div>
+        </div>
+        <div class="card" style="width: 18rem">
+          <img
+            class="card-img-top"
+            src="./card image/carb_banana.jpg"
+            alt="Card image cap"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Banana</h5>
+            <p class="card-text">
+              One serving, or one medium ripe banana, provides about 110 calories, 0 gram fat, 1 gram protein, 28 grams carbohydrate.
+            </p>
+            <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+          </div>
+        </div>
+        <div class="card" style="width: 18rem">
+          <img
+            class="card-img-top"
+            src="./card image/carb_potato.jpg"
+            alt="Card image cap"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Potatoes</h5>
+            <p class="card-text">
+              Potatoes themselves are relatively high in carbs. One medium potato contains 34.8 grams of carbs, 2.4 of which come from fiber ( 53 )
+            </p>
+            <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+          </div>
+        </div>
+      </div>
+
+      <h3 class="heading-3">2. Protein</h2>
+      <p class="subpara">
+        Specifically, the majority of gym-goers will be well aware that
+        consuming protein is important. Likewise, the reason why protein is so
+        important is because it plays a key role in recovery and repair. A gym
+        diet plan must include protein. During exercise, the body is exposed to
+        strains and stresses. This cause damage to occur to the muscles at a
+        microscopic level. So, in order to repair the damage, protein is needed.
+        Without it, recovery periods will be extended and chronic fatigue may
+        become a factor.<br /><br />
+        Protein is found most highly in animal produce such as lean meats, eggs
+        & dairy. Similarly, it can also be found in smaller quantities in foods
+        such as seeds, nuts, legumes, beans, and soy.
+      </p><br>
+
+      <div class="card-m">
+        <div class="card" style="width: 18rem">
+          <img
+            class="card-img-top"
+            src="./card image/protein_egg.jpg"
+            alt="Card image cap"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Egg</h5>
+            <p class="card-text">
+              one large egg contains 6.3 g of protein distributed between the yolk and white portions (3.6 g in egg white and 2.7 g in egg yolk) 
+            </p>
+            <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+          </div>
+        </div>
+        <div class="card" style="width: 18rem">
+          <img
+            class="card-img-top"
+            src="./card image/protein_chicken.jpg"
+            alt="Card image cap"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Chicken</h5>
+            <p class="card-text">
+              Three ounces (85 grams) of roasted, skinless chicken breast will provide you about 27 grams of protein and 140 calories.
+            </p>
+            <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+          </div>
+        </div>
+        <div class="card" style="width: 18rem">
+          <img
+            class="card-img-top"
+            src="./card image/protein_sprouts.jpg"
+            alt="Card image cap"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Sprouts</h5>
+            <p class="card-text">
+              several studies show that sprouting helps increase protein content. Sprouts also tend to contain higher levels of essential amino acids, with certain individual amino acids increasing by as much as 30% (4, 5 , 6 )
+            </p>
+            <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+          </div>
+        </div>
+        <div class="card" style="width: 18rem">
+          <img
+            class="card-img-top"
+            src="./card image/protein_whey.jpg"
+            alt="Card image cap"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Whey</h5>
+            <p class="card-text">
+              Whey is a liquid that separates from milk during cheese production. The protein part of whey is called whey protein. It is a complete, high quality protein that contains all of the essential amino acids.
+            </p>
+            <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+          </div>
+        </div>
+      </div>
+      <br>
+
+      <h3 class="heading-3">3. Fats</h2>
+      <p class="subpara">
+        Fats are often incorrectly seen as the primary reason for fat gain.
+        However, fats are not responsible for this and actually play a key role
+        in the absorption and transport of nutrients. In addition, they can have
+        a positive impact on heart health and hormone production.<br /><br />While
+        fats can have a positive impact on health, there are several types of
+        fat some of which are of greater benefit than others in gym diet plans.
+        Recently studies have shown that saturated fats are not as harmful as
+        once believed, you should mainly focus primarily on unsaturated fats.
+        Examples of unsaturated fat foods include avocados, seeds, nuts, peanut
+        butter, fish (salmon, tuna, mackerel), oils (olive, peanut), and soy
+        products that you can include in your gym diet plan.
+      </p>>
+    </div>
+
+    <div class="card-m">
+      <div class="card" style="width: 18rem">
+        <img
+          class="card-img-top"
+          src="./card image/fats_fish.jpg"
+          alt="Card image cap"
+        />
+        <div class="card-body">
+          <h5 class="card-title">Fatty Fish</h5>
+          <p class="card-text">
+            Fatty fish is widely regarded as one of the most nutritious animal protein sources available. This includes fish like salmon, trout, mackerel, sardines, and herring.
+          </p>
+          <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+        </div>
+      </div>
+      <div class="card" style="width: 18rem">
+        <img
+          class="card-img-top"
+          src="./card image/fats_cheese.jpg"
+          alt="Card image cap"
+        />
+        <div class="card-body">
+          <h5 class="card-title">Cheese</h5>
+          <p class="card-text">
+            
+            It is also rich in protein, with a single ounce (28 grams) of cheese containing 6 grams of protein, nearly as much as a glass of milk (6Trusted Source, 7Trusted Source).
+          <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+        </div>
+      </div>
+      <div class="card" style="width: 18rem">
+        <img
+          class="card-img-top"
+          src="./card image/fats_choc.jpg"
+          alt="Card image cap"
+        />
+        <div class="card-body">
+          <h5 class="card-title">Dark Chocolate</h5>
+          <p class="card-text">
+            Dark chocolate is a nutritious food disguised as a tasty treat. It is very high in fat, with fat accounting for around 65% of calories.
+          </p>
+          <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+        </div>
+      </div>
+      <div class="card" style="width: 18rem">
+        <img
+          class="card-img-top"
+          src="./card image/fats_dryfruits.jpg"
+          alt="Card image cap"
+        />
+        <div class="card-body">
+          <h5 class="card-title">Dry Fruits</h5>
+          <p class="card-text">
+            Nuts are incredibly healthy. They are high in healthy fats and fiber, and are a good plant-based source of protein.
+          </p>
+          <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+        </div>
+      </div>
+    </div>
+    
+    
+
+    <!-- ----------------------------------footer--------------- -->
+
+    <div>
+      <!-- Footer -->
+      <footer
+        class="text-center text-lg-start text-white"
+        style="background-color: #02050ca9"
+      >
+        <!-- Section: Social media -->
+        <section
+          class="d-flex justify-content-between p-4"
+          style="background-color: #1e1458"
+        >
+          <!-- Left -->
+          <div class="me-2">
+            <span>Get connected with us on social networks:</span>
+          </div>
+          <!-- Left -->
+
+          <!-- Right -->
+          <div>
+            <a href="" class="text-white me-2">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="" class="text-white me-2">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="" class="text-white me-2">
+              <i class="fab fa-google"></i>
+            </a>
+            <a href="" class="text-white me-2">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="" class="text-white me-2">
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="" class="text-white me-2">
+              <i class="fab fa-github"></i>
+            </a>
+          </div>
+          <!-- Right -->
+        </section>
+        <!-- Section: Social media -->
+
+        <!-- Section: Links  -->
+        <section class="">
+          <div class="container text-center text-md-start mt-2">
+            <!-- Grid row -->
+            <div class="row mt-3">
+              <!-- Grid column -->
+              <div class="col-md-1 col-lg-2 col-xl-3 mx-auto mb-2">
+                <!-- Content -->
+                <h6 class="text-uppercase fw-bold">Company name</h6>
+                <hr
+                  class="mb-4 mt-0 d-inline-block mx-auto"
+                  style="width: 60px; background-color: #7c4dff; height: 2px"
+                />
+                <p>
+                    <span>Lift<span class="Nf">N</span>Burn</span>
+                </p>
+              </div>
+              <!-- Grid column -->
+
+              <!-- Grid column -->
+              <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-2">
+                <!-- Links -->
+                <h6 class="text-uppercase fw-bold">Products</h6>
+                <hr
+                  class="mb-2 mt-0 d-inline-block mx-auto"
+                  style="width: 60px; background-color: #7c4dff; height: 2px"
+                />
+                <p>
+                  <a href="#!" class="text-white">MDBootstrap</a>
+                </p>
+                <p>
+                  <a href="#!" class="text-white">MDWordPress</a>
+                </p>
+                <p>
+                  <a href="#!" class="text-white">BrandFlow</a>
+                </p>
+                <p>
+                  <a href="#!" class="text-white">Bootstrap Angular</a>
+                </p>
+              </div>
+              <!-- Grid column -->
+
+              <!-- Grid column -->
+              <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-2">
+                <!-- Links -->
+                <h6 class="text-uppercase fw-bold">Useful links</h6>
+                <hr
+                  class="mb-2 mt-0 d-inline-block mx-auto"
+                  style="width: 60px; background-color: #7c4dff; height: 2px"
+                />
+                <p>
+                  <a href="#!" class="text-white">Your Account</a>
+                </p>
+                <p>
+                  <a href="#!" class="text-white">Become an Affiliate</a>
+                </p>
+                <p>
+                  <a href="#!" class="text-white">Shipping Rates</a>
+                </p>
+                <p>
+                  <a href="#!" class="text-white">Help</a>
+                </p>
+              </div>
+              <!-- Grid column -->
+
+              <!-- Grid column -->
+              <div class="col-md-2 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-2">
+                <!-- Links -->
+                <h6 class="text-uppercase fw-bold">Contact</h6>
+                <hr
+                  class="mb-2 mt-0 d-inline-block mx-auto"
+                  style="width: 60px; background-color: #7c4dff; height: 2px"
+                />
+                <p><i class="fas fa-home mr-3"></i> G10/22 Chouhan Town, Bhilai</p>
+                <p><i class="fas fa-envelope mr-3"></i> mayankyadavdotcom@gmail.com</p>
+                <p><i class="fas fa-phone mr-3"></i> +917000507908</p>
+                <p><i class="fas fa-print mr-3"></i> +919893714340</p>
+              </div>
+              <!-- Grid column -->
+            </div>
+            <!-- Grid row -->
+          </div>
+        </section>
+        <!-- Section: Links  -->
+
+        <!-- Copyright -->
+        <div
+          class="text-center p-3"
+          style="background-color: rgba(0, 0, 0, 0.2)"
+        >
+          Never forget:
+          <a class="text-white" href="https://mdbootstrap.com/"
+            >It's never too late to begin</a
+          >
+        </div>
+        <!-- Copyright -->
+      </footer>
+      <!-- Footer -->
+    </div>
+    <!-- End of .container -->
+  </body>
+</html>

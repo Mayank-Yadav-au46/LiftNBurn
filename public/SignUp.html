@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>SignUp</title>
+  </head>
+  <link href="./Css/signUp.css" rel="stylesheet">
+  <script src="./Script/signup_script.js" defer></script>
+  
+  <body>
+    <fieldset>      
+        <div class="form">            
+          <h1 style="text-align: center ;">Sign Up</h1><br>
+          <button class="btn1">1</button>
+          <span> Your Basic Info</span><br><br>
+          <label for="inpN">Your Full Name:</label><br>
+          <input id = "inpN" class="inp" type="text" name="name" required></input>
+          <br><br>
+          <label for="email">Email:</label><br>
+          <input id = "email" class="inp" type="email" name="email" required></input>
+          <br><br>
+         
+          <label for="age">Age:</label><br>
+          <input class="age" id="age" type="number" name="age" required></input>
+          <br><br>
+          <label for="gender">Gender:</label><br>
+          <input id="male" type="radio" name="gender" value="Male">Male</input>
+          <input id="female" type="radio" name="gender" value="Female">Female</input>
+          <br><br>
+
+          <label for="occupation">Occupation:</label><br> 
+          <input id="occupation" type="text" name="occupation" ></input><br><br>
+
+          <label for="bio">Bio (optional):</label><br>
+          <textarea id="bio" name="bio" rows="4" cols="30"></textarea><br><br>   
+          <br><br>
+
+          <button class="btn1">2</button>
+          <span>Personal Details</span><br>
+
+          <label for="height">Height (in cm):</label><br>
+          <input class="height" id="height" type="number" name="height" required></input>          
+          <br><br>
+          
+          <label for="weight">Weight (in kg):</label><br>
+          <input class="weight" id="weight" type="number" name="weight" required></input>          
+          <br><br>
+          
+          <label for="goal">Choose your goal:</label><br>
+          <input type="radio" id="loosefat" name="goal" value="loose_weight">Loose fat and gain muscle<br>
+          <input type="radio" id="gainweight" name="goal" value="gain_weight">Gain weight and muscle<br><br>    
+
+          <label for="TW">Target weight (in kg):</label><br>
+          <input class="TW" id="TW" type="number" name="TW" required></input>          
+          <br><br>
+
+          <label for="NOD">No. of days in which you want to loose/gain your weight:</label><br>
+          <input class="WTL" id="NOD" type="number" name="NOD" required></input>          
+          <br><br>
+          
+          <label for="pass">Password:</label><br>
+          <input class="inp" id="pass" type="password" name="pass" required>
+          <br><br>
+          <label for="pass">Confirm Password:</label><br>
+          <input class="inp" id="Cpass" type="password" name="cpass" required>
+          <br><br>
+          
+          
+          <button class="submit" type="submit" onclick="add_data()">SignUp</button>
+        </div>          
+      </fieldset>
+  </body>
+</html>
