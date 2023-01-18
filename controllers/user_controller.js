@@ -4,6 +4,7 @@ const bcrypt = require("bcrypt");
 const user_model = require("../models/user_model");
 
 const secret_key = process.env.secret_key;
+// const secret_key = "123@321";
 
 //-----------------------------signup function--------------------------------------
 
