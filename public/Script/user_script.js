@@ -15,6 +15,8 @@ const logout = async () => {
     console.log(error);
   }
 };
+
+// ---------------main function--------------
 async function user() {
   const res_obj = await fetch("user/userpage/object", {
     headers: {
@@ -29,6 +31,7 @@ async function user() {
   document.getElementById("dispbmi").innerText = response.BMI;
   // document.getElementById("dispbmr").innerText = response.BMR;
   document.getElementById("ctb").innerText = response.CTB;
+
   let warmup_cal = response.CTB * (20 / 100);
   warmup_cal = Math.trunc(warmup_cal);
   document.getElementById("ctb-warmup").innerText = warmup_cal;
@@ -66,11 +69,14 @@ async function rate_cal() {
     console.log("rate is running");
     const response = await res_obj.json();
     const { inp_arr, cal_to_burn } = response;
+    console.log(inp_arr, cal_to_burn);
     let sum = 0;
     for (let i = 0; i < inp_arr.length; i++) {
-      sum = sum + inp_arr[0];
+      sum = sum + inp_arr[i];
     }
+
     let rate = (sum / (inp_arr.length * cal_to_burn)) * 100;
+    console.log(rate);
     rate = Math.trunc(rate);
     document.getElementById("rate").innerText = rate;
   } catch (error) {

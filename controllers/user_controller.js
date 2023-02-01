@@ -101,7 +101,9 @@ const object = async (req, res) => {
     const user = await userModel.findOne({ email });
 
     res.send(user);
-  } catch (error) {}
+  } catch (error) {
+    res.send(error);
+  }
 };
 
 // ------------------------------------rate function----------------
